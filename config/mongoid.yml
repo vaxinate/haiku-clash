@@ -1,2 +1,2 @@
 production:
-  uri: mongodb://haikuduel:l0l!f4rtz@ds031587.mongolab.com:31587/haikudeul
+  uri: <%= ENV['MONGOLAB_URI'] %>
