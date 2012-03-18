@@ -1,5 +1,5 @@
 #battle
-  - if @haikus.length < 3
+  - if @haikus.length < 2
     .row
       .span11.offset1
         %h1 We don't have enough haikus yet!
@@ -7,7 +7,7 @@
           Why don't you
           %a{ :href => "/haiku" } write one
           to help us get started?
-  - if @haikus >= 2
+  - if @haikus.length >= 2
     .row
       .span4.offset1
         = haml :haiku, :locals => { :haiku => @haikus.first }
