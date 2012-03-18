@@ -1,0 +1,64 @@
+.nav .brand {
+  font-size: 30px;
+}
+
+#battle {
+  margin-top: 90px;
+}
+
+#form {
+  margin-top: 50px;
+}
+
+#leaderboard {
+  margin-top: 60px;
+}
+
+#leaderboard .row {
+  margin: 10px 0;
+}
+
+.haiku {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 0.200);
+}
+
+#battle .haiku:hover {
+  background-color: rgba(102, 204, 51, 0.240);
+}
+
+.haiku .line {
+  margin: 10px 0px;
+}
+
+#battle .vs .outer {
+  height: 115px;
+  width: 100%;
+  display: table;
+}
+
+#battle .vs .middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#battle .vs .inner {
+  margin: 0 auto;
+}
+
+#battle .vs .inner-content {
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: bold;
+  width: 50px;
+}
+
+#battle .haiku.selected {
+  border: 2px solid rgba(102, 204, 51, 0.240);
+}
+
+.alert-error ul {
+  list-style-type: none;
+}

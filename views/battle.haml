@@ -1,0 +1,18 @@
+#battle
+  .row
+    .span4.offset1
+      = haml :haiku, :locals => { :haiku => @haikus.first }
+    .span1.vs
+      .outer
+        .middle
+          .inner
+            .inner-content vs.
+    .span4
+      = haml :haiku, :locals => { :haiku => @haikus.second }
+
+%form#battle-report{ :method => 'post', :action => 'battle' }
+  %input{ :type => 'hidden', :name => 'win'}
+  %input{ :type => 'hidden', :name => 'loss'}
+
+%script{ :src => '/assets/js/jquery.js', :type => 'text/javascript' }
+%script{ :src => '/assets/js/battle.js', :type => 'text/javascript' }

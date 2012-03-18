@@ -1,0 +1,24 @@
+!!! 5
+%html
+  %head
+    %link{ :href => '/assets/css/bootstrap.css', :rel => 'stylesheet'}
+    %link{ :href => '/assets/css/bootstrap-responsive.css', :rel => 'stylesheet'}
+    %link{ :href => '/assets/css/haikuduel.css', :rel => 'stylesheet'}
+    %link{ :href => 'http://fonts.googleapis.com/css?family=Radley', :rel => 'stylesheet', :type => 'text/css' }
+    %script{ :src => '/assets/js/jquery.js', :type => 'text/javascript' }
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand{ :href => 'battle' } HaikuClash
+          %div.nav-collapse
+            %ul.nav
+              %li{ :class => "#{request.path_info.include?('/battle') ? 'active' : ''}" }
+                %a{ :href => '/battle' } Clash!
+              %li{ :class => "#{request.path_info.include?('/leaderboard') ? 'active' : ''}" }
+                %a{ :href => '/leaderboard'} Standings
+              %li{ :class => "#{request.path_info.include?('/haiku') ? 'active' : ''}" }
+                %a{ :href => '/haiku' } Write a Haiku
+    #content
+      = yield
+%script{ :src => '/assets/js/haikuduel.js', :type => 'text/javascript' }
