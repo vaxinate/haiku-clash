@@ -9,6 +9,10 @@ Mongoid.load!("config/mongoid.yml")
 #   config.master = Mongo::Connection.new.db("haikuduel")
 # end
 
+get '/' do
+  redirect to '/battle'
+end
+
 get '/haiku' do
   @haiku = Haiku.new :lines => []
   puts @haiku.lines.map(&:class)
