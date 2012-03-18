@@ -1,2 +1,6 @@
+development:
+  host: localhost
+  database: haikuduel
+
 production:
   uri: <%= ENV['MONGOLAB_URI'] %>

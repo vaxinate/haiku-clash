@@ -3,9 +3,11 @@ require 'haml'
 
 require_relative 'lib/haiku'
 
-Mongoid.configure do |config|
-  config.master = Mongo::Connection.new.db("haikuduel")
-end
+Mongoid.load!("config/mongoid.yml")
+
+# Mongoid.configure do |config|
+#   config.master = Mongo::Connection.new.db("haikuduel")
+# end
 
 get '/haiku' do
   @haiku = Haiku.new :lines => []
