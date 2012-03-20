@@ -6,7 +6,7 @@
     %link{ :href => '/assets/css/haikuduel.css', :rel => 'stylesheet'}
     %link{ :href => 'http://fonts.googleapis.com/css?family=Radley', :rel => 'stylesheet', :type => 'text/css' }
     %script{ :src => '/assets/js/jquery.js', :type => 'text/javascript' }
-  %body
+  %body{ :style => 'padding: 40px' }
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
@@ -19,6 +19,15 @@
                 %a{ :href => '/leaderboard'} Standings
               %li{ :class => "#{request.path_info.include?('/haiku') ? 'active' : ''}" }
                 %a{ :href => '/haiku' } Write a Haiku
-    #content
-      = yield
+    #box.row-fluid
+      .span1 &nbsp;
+      .span10
+        = yield
+      .span1 &nbsp;
+    .row-fluid
+      .span1 &nbsp;
+      .span10
+        %footer
+          %a{ :href => 'http://github.com/vaxinate' } &copy; 2012 Adam Clarke
+      .span1 &nbsp;
 %script{ :src => '/assets/js/haikuduel.js', :type => 'text/javascript' }

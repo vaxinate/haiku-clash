@@ -1,3 +1,28 @@
+footer {
+  border-top: 1px solid #969696;
+  padding: 0 5px;
+}
+
+textarea {
+  font-family: "Radley";
+  padding: 0 10px;
+  height: 6.5em;
+}
+
+a {
+  color: #969696;
+}
+
+#show .haiku,
+textarea {
+  font-size: 4.2em;
+  line-height: 1.25em;
+}
+
+#box {
+  min-height: 400px;
+}
+
 .nav .brand {
   font-size: 30px;
 }
@@ -25,6 +50,11 @@
   background-color: rgba(204, 204, 204, 0.200);
 }
 
+.haiku a {
+  font-size: 10pt;
+  line-height: 11pt;
+}
+
 #battle .haiku:hover {
   background-color: rgba(102, 204, 51, 0.240);
 }
@@ -33,26 +63,34 @@
   margin: 10px 0px;
 }
 
-#battle .vs .outer {
+.center .outer {
   height: 115px;
   width: 100%;
   display: table;
 }
 
-#battle .vs .middle {
+.center .middle {
   display: table-cell;
   vertical-align: middle;
 }
 
-#battle .vs .inner {
+.center .inner {
   margin: 0 auto;
 }
 
-#battle .vs .inner-content {
+.center .inner-content {
   margin: 0 auto;
+}
+
+.vs .inner-content {
   font-size: 40px;
   font-weight: bold;
   width: 50px;
+}
+
+.not-enough .inner-content {
+  font-size: 40px;
+  width: 500px;
 }
 
 #battle .haiku.selected {
@@ -62,3 +100,4 @@
 .alert-error ul {
   list-style-type: none;
 }
+

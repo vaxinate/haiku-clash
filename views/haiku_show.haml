@@ -1,6 +1,4 @@
-.row
-  .span4.offset1.alert.alert-success
-    Your haiku has been saved!
-.row
-  .span4.offset1
-    = haml :haiku, :locals => { :haiku => @haiku }
+#show
+  .row-fluid
+    .span12
+      = haml :haiku, :locals => { :haiku => @haiku }

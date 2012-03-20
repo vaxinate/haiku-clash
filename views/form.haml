@@ -5,7 +5,7 @@
         %ul
           - @haiku.errors.each do |key, error|
             %li= error
-    %textarea.span4{ :type => 'text', :name => 'haiku', :rows => '5', :placeholder => 'Write!' }
+    %textarea.span10{ :type => 'text', :name => 'haiku', :placeholder => 'Write!' }
       = @haiku.lines.join("<br>")
     %br
     %button{ :type => :submit, :class => 'btn btn-large' } Save!

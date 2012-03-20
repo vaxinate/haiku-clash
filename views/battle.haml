@@ -1,22 +1,25 @@
 #battle
-  - if @haikus.length < 2
-    .row
-      .span11.offset1
-        %h1 We don't have enough haikus yet!
-        %h2 
-          Why don't you
-          %a{ :href => "/haiku" } write one
-          to help us get started?
-  - if @haikus.length >= 2
-    .row
-      .span4.offset1
+  .row-fluid
+    - if @haikus.length < 2
+      .span12.center.not-enough
+        .outer
+          .middle
+            .inner
+              .inner-content
+                %h1 We don't have enough haikus yet!
+                %h2 
+                  Why don't you
+                  %a{ :href => "/haiku" } write one
+                  to help us get started?
+    - else
+      .span5
         = haml :haiku, :locals => { :haiku => @haikus.first }
-      .span1.vs
+      .span2.center.vs
         .outer
           .middle
             .inner
               .inner-content vs.
-      .span4
+      .span5
         = haml :haiku, :locals => { :haiku => @haikus.second }
 
 %form#battle-report{ :method => 'post', :action => 'battle' }
