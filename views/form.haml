@@ -1,5 +1,6 @@
 #form
   %form{ :method => 'post', :action => '/haiku' }
+    = csrf_tag
     -if @haiku.errors.any?
       %div.alert.alert-error
         %ul

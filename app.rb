@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'haml'
+require 'rack/csrf'
 
 require_relative 'lib/haiku'
 
@@ -8,6 +9,23 @@ Mongoid.load!("config/mongoid.yml")
 # Mongoid.configure do |config|
 #   config.master = Mongo::Connection.new.db("haikuduel")
 # end
+
+configure do
+  csrf_token = ENV['RACK_ENV'] == "production" ? ENV['CSRF_SECRET'] : "herpderp"
+
+  use Rack::Session::Cookie, :secret => csrf_token
+  use Rack::Csrf, :raise => true
+end
+
+helpers do
+  def csrf_token
+    Rack::Csrf.csrf_token(env)
+  end
+
+  def csrf_tag
+    Rack::Csrf.csrf_tag(env)
+  end
+end
 
 get '/' do
   redirect to '/battle'

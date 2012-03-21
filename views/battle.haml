@@ -23,6 +23,7 @@
         = haml :haiku, :locals => { :haiku => @haikus.second }
 
 %form#battle-report{ :method => 'post', :action => 'battle' }
+  = csrf_tag
   %input{ :type => 'hidden', :name => 'win'}
   %input{ :type => 'hidden', :name => 'loss'}
 

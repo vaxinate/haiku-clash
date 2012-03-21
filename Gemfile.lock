@@ -34,6 +34,8 @@ GEM
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
+    rack_csrf (2.4.0)
+      rack (>= 0.9)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     ruby_rhymes (0.1.2)
@@ -57,6 +59,7 @@ DEPENDENCIES
   haml
   heroku
   mongoid
+  rack_csrf
   ruby_rhymes
   shotgun
   sinatra
