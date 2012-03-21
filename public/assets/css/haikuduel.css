@@ -24,12 +24,12 @@ textarea {
   line-height: 60px;
 }
 
-#leaderboard .haiku {
+#leaderboard .haiku, #show .haiku {
   margin: 20px 0;
 }
 
 #box {
-  min-height: 400px;
+  min-height: 500px;
 }
 
 .nav .brand {
