@@ -40,5 +40,7 @@ class Vote
   include Mongoid::Document
   include Mongoid::Timestamps::Created
 
+  embedded_in :haiku
+
   field :type, :type => Symbol
 end

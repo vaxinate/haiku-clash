@@ -35,6 +35,7 @@ end
 
 get '/battle' do
   @haikus = Haiku.all.shuffle
+  puts @haikus
   haml :battle
 end
 
