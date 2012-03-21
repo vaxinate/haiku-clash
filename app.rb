@@ -52,6 +52,6 @@ post '/battle' do
 end
 
 get '/leaderboard' do
-  @haikus = Haiku.all.sort_by { |haiku| -haiku.record['win'] }
+  @haikus = Haiku.all.sort_by { |haiku| haiku.wins.count }
   haml :leaderboard
 end

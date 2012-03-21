@@ -29,6 +29,14 @@ class Haiku
     lines.map { |l| l.to_phrase.syllables }
   end
 
+  def wins
+    votes.select { |v| v.type == :win }
+  end
+
+  def losses
+    votes.select { |v| v.type == :loss }
+  end
+
   def update_record!(sym)
     record[sym.to_s] += 1
     self
