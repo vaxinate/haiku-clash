@@ -1,11 +1,11 @@
 #form
-  %form{ :method => 'post', :action => '/haiku', :style => 'padding: 15px' }
+  %form{ :method => 'post', :action => '/haiku' }
     -if @haiku.errors.any?
       %div.alert.alert-error
         %ul
           - @haiku.errors.each do |key, error|
             %li= error
-    %textarea.span10{ :type => 'text', :name => 'haiku', :placeholder => 'Write!' }
+    %textarea{ :type => 'text', :name => 'haiku', :placeholder => 'Write!' }
       = @haiku.lines.join("<br>")
     %br
     %button{ :type => :submit, :class => 'btn btn-large' } Save!

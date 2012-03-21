@@ -2,4 +2,6 @@
   - haiku.lines.each do |line|
     .line
       &= line
-  %a.permalink{ :href => "/haiku/#{haiku.id}" } permalink
+  .links
+    %a.permalink{ :href => "/haiku/#{haiku.id}" } 
+      = "haikuclash.herokuapp.com/haiku/#{haiku.id}"

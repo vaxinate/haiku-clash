@@ -1,5 +1,5 @@
 #leaderboard
-  - @haikus.each do |haiku|
-    .row
-      .span4.offset1
+  .row-fluid
+    .span12
+      - @haikus.each do |haiku|
         = haml :haiku, :locals => { :haiku => haiku }

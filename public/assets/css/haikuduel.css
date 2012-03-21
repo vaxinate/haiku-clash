@@ -6,17 +6,26 @@ footer {
 textarea {
   font-family: "Radley";
   padding: 0 10px;
-  height: 6.5em;
+  width: 98%;
+  height: 375px;
 }
 
 a {
   color: #969696;
 }
 
-#show .haiku,
+a:hover {
+  color: #969696;
+}
+
+#leaderboard .haiku, #show .haiku,
 textarea {
-  font-size: 4.2em;
-  line-height: 1.25em;
+  font-size: 55px;
+  line-height: 60px;
+}
+
+#leaderboard .haiku {
+  margin: 20px 0;
 }
 
 #box {
@@ -35,9 +44,6 @@ textarea {
   margin-top: 50px;
 }
 
-#leaderboard {
-  margin-top: 60px;
-}
 
 #leaderboard .row {
   margin: 10px 0;
@@ -50,9 +56,14 @@ textarea {
   background-color: rgba(204, 204, 204, 0.200);
 }
 
-.haiku a {
-  font-size: 10pt;
-  line-height: 11pt;
+.haiku .links {
+  font-size: 13px;
+  line-height: 17px;
+}
+
+#battle .haiku .links {
+  font-size: 9px;
+  line-height: 12px;
 }
 
 #battle .haiku:hover {
