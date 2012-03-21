@@ -4,9 +4,12 @@ require 'mongoid'
 
 class Haiku
   include Mongoid::Document
+  include Mongoid::Timestamps::Created
 
   field :lines, :type => Array
   field :record, :type => Hash, :default => {:win => 0, :loss => 0}
+
+  embeds_many :votes
 
   validate :proper_number_of_syllables, :only_3_lines
 
@@ -31,7 +34,11 @@ class Haiku
     self
   end
 
-  # def valid?
-  #   lines < 4 && syllables == [5, 7, 5] 
-  # end
+end
+
+class Vote
+  include Mongoid::Document
+  include Mongoid::Timestamps::Created
+
+  field :type, :type => Symbol
 end

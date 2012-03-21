@@ -39,8 +39,15 @@ get '/battle' do
 end
 
 post '/battle' do
-  Haiku.find(params[:win]).update_record!(:win).save
-  Haiku.find(params[:loss]).update_record!(:loss).save
+  winner = Haiku.find(params[:win])
+  loser = Haiku.find(params[:loss])
+
+  winner.votes << Vote.new(:type => :win)
+  loser.votes << Vote.new(:type => :loss)
+
+  winner.save
+  loser.save
+
   redirect to '/battle'
 end
 
