@@ -28,6 +28,10 @@ textarea {
   margin: 20px 0;
 }
 
+#leaderboard .haiku.streak {
+  border: 2px solid rgba(255, 12, 0, 0.150);
+}
+
 #box {
   min-height: 500px;
 }

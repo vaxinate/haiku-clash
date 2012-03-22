@@ -1,4 +1,4 @@
-.haiku{ 'data-id' => haiku.id }
+.haiku{ 'data-id' => haiku.id, :class => haiku.on_fire? ? "streak" : "" }
   - haiku.lines.each do |line|
     .line
       &= line

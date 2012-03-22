@@ -37,6 +37,11 @@ class Haiku
     votes.select { |v| v.type == :loss }
   end
 
+  def on_fire?
+    wins = votes.all.order(:created_at, :desc).take(5).reject { |v| v.type == :loss }
+    wins.length == 5
+  end
+
   def update_record!(sym)
     record[sym.to_s] += 1
     self
