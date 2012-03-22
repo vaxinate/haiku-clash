@@ -6,6 +6,7 @@
     %link{ :href => '/assets/css/haikuduel.css', :rel => 'stylesheet'}
     %link{ :href => 'http://fonts.googleapis.com/css?family=Radley', :rel => 'stylesheet', :type => 'text/css' }
     %script{ :src => '/assets/js/jquery.js', :type => 'text/javascript' }
+    %script{ :src => '/assets/js/bootstrap-collapse.js', :type => 'text/javascript' }
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-30208709-1']);
@@ -17,11 +18,14 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
   %body{ :style => 'padding: 40px' }
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
+          %a.btn.btn-navbar{ 'data-toggle' => 'collapse', 'data-target' => '.nav-collapse' }
+            .icon-bar
+            .icon-bar
+            .icon-bar
           %a.brand{ :href => 'battle' } HaikuClash
           %div.nav-collapse
             %ul.nav
