@@ -6,6 +6,18 @@
     %link{ :href => '/assets/css/haikuduel.css', :rel => 'stylesheet'}
     %link{ :href => 'http://fonts.googleapis.com/css?family=Radley', :rel => 'stylesheet', :type => 'text/css' }
     %script{ :src => '/assets/js/jquery.js', :type => 'text/javascript' }
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30208709-1']);
+      _gaq.push(['_trackPageview']);
+
+    :javascript
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
   %body{ :style => 'padding: 40px' }
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -31,14 +43,3 @@
           %a{ :href => 'http://github.com/vaxinate' } &copy; 2012 Adam Clarke
       .span1 &nbsp;
 %script{ :src => '/assets/js/haikuduel.js', :type => 'text/javascript' }
-:javascript
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-30208709-1']);
-  _gaq.push(['_trackPageview']);
-
-:javascript
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
